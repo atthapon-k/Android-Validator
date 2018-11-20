@@ -6,7 +6,7 @@ import java.text.NumberFormat
 
 class GreaterThanRule(
     var target: Number = 0,
-    var errorMsg: String = "${InitValidator.errorMessage.getGreaterThan()} $target"
+    var errorMsg: String = String.format(InitValidator.errorMessage.getGreaterThan(), target)
 ): BaseRule {
 
     override fun validate(text: String): Boolean {

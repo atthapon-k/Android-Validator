@@ -13,7 +13,7 @@ open class DefaultErrorMessage: ErrorMessage {
 
     override fun getAtLeastOneUpperCase(): String = "At least one letter should be in upper case."
 
-    override fun getContain(): String = "Should contain"
+    override fun getContain(): String = "Should contain %s."
 
     override fun getCreditCard(): String = "Invalid Credit Card Number!"
 
@@ -23,19 +23,19 @@ open class DefaultErrorMessage: ErrorMessage {
 
     override fun getEmail(): String = "Invalid Email Address!"
 
-    override fun getEndsWith(): String = "Should end with"
+    override fun getEndsWith(): String = "Should end with %s."
 
-    override fun getGreaterThanOrEqual(): String = "Should be greater than or equal to"
+    override fun getGreaterThanOrEqual(): String = "Should be greater than or equal to %s."
 
-    override fun getGreaterThan(): String = "Should be greater than"
+    override fun getGreaterThan(): String = "Should be greater than %s."
 
-    override fun getLessThanOrEqual(): String = "Should be less than or equal to"
+    override fun getLessThanOrEqual(): String = "Should be less than or equal to %s"
 
-    override fun getLessThan(): String = "Should be less than"
+    override fun getLessThan(): String = "Should be less than %s."
 
-    override fun getMaxLength(): String = "Length should be less than or equal to"
+    override fun getMaxLength(): String = "Length should be less than or equal to %s"
 
-    override fun getMinLength(): String = "Length should be greater than"
+    override fun getMinLength(): String = "Length should be greater than %s."
 
     override fun getNonEmpty(): String = "Can't be empty!"
 
@@ -43,9 +43,9 @@ open class DefaultErrorMessage: ErrorMessage {
 
     override fun getNoSpecialCharacter(): String = "Should not contain any special characters"
 
-    override fun getNotContain(): String = "Should not contain"
+    override fun getNotContain(): String = "Should not contain %s."
 
-    override fun getNumberEqualTo(): String = "Should be equal to"
+    override fun getNumberEqualTo(): String = "Should be equal to %s."
 
     override fun getOnlyNumbers(): String = "Should not contain any alphabet characters!"
 
@@ -55,11 +55,11 @@ open class DefaultErrorMessage: ErrorMessage {
 
     override fun getStartsWithNumber(): String = "Should start with any number."
 
-    override fun getStartsWith(): String = "Should start with"
+    override fun getStartsWith(): String = "Should start with %s."
 
-    override fun getTextEqualTo(): String = "Should be equal to"
+    override fun getTextEqualTo(): String = "Should be equal to %s."
 
-    override fun getTextNotEqualTo(): String = "Should not be equal to"
+    override fun getTextNotEqualTo(): String = "Should not be equal to %s."
 
     override fun getValidNumber(): String = "Invalid Number!"
 

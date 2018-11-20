@@ -4,8 +4,8 @@ import com.atthapon.validatorlib.common.InitValidator
 
 class ContainsRule(
     val target: String,
-    var errorMsg: String = "${InitValidator.errorMessage.getContain()} $target"
-): BaseRule {
+    var errorMsg: String = String.format(InitValidator.errorMessage.getContain(), target)
+) : BaseRule {
 
     override fun validate(text: String): Boolean {
 
