@@ -4,7 +4,7 @@ import com.atthapon.validatorlib.common.InitValidator
 
 class MinLengthRule(
     val minLength: Int,
-    var errorMsg: String = "${InitValidator.errorMessage.getMinLength()} $minLength"
+    var errorMsg: String = String.format(InitValidator.errorMessage.getMinLength(), minLength)
 ): BaseRule {
 
     override fun validate(text: String): Boolean {

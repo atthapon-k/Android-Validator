@@ -4,7 +4,7 @@ import com.atthapon.validatorlib.common.InitValidator
 
 class StartsWithRule(
     val target: String,
-    var errorMsg: String = "${InitValidator.errorMessage.getStartsWith()} $target"
+    var errorMsg: String = String.format(InitValidator.errorMessage.getStartsWith(), target)
 ): BaseRule {
 
     override fun validate(text: String): Boolean {

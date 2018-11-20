@@ -6,7 +6,7 @@ import java.text.NumberFormat
 
 class NumberEqualToRule(
     val target: Number,
-    var errorMsg: String = "${InitValidator.errorMessage.getNumberEqualTo()} $target"
+    var errorMsg: String = String.format(InitValidator.errorMessage.getNumberEqualTo(), target)
 ): BaseRule {
 
     override fun validate(text: String): Boolean {

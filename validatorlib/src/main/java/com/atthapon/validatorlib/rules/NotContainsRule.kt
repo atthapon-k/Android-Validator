@@ -4,7 +4,7 @@ import com.atthapon.validatorlib.common.InitValidator
 
 class NotContainsRule(
     val target: String,
-    var errorMsg: String = "${InitValidator.errorMessage.getNotContain()} $target"
+    var errorMsg: String = String.format(InitValidator.errorMessage.getNotContain(), target)
 ): BaseRule {
 
     override fun validate(text: String): Boolean {

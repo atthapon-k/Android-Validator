@@ -6,7 +6,7 @@ import java.text.NumberFormat
 
 class GreaterThanOrEqualRule(
     val target: Number,
-    var errorMsg: String = "${InitValidator.errorMessage.getGreaterThanOrEqual()} $target"
+    var errorMsg: String = String.format(InitValidator.errorMessage.getGreaterThanOrEqual(), target)
 ):
     BaseRule {
 

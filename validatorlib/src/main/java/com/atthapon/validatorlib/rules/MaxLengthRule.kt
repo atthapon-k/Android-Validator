@@ -4,7 +4,7 @@ import com.atthapon.validatorlib.common.InitValidator
 
 class MaxLengthRule(
     val maxLength: Int,
-    var errorMsg: String = "${InitValidator.errorMessage.getMaxLength()} $maxLength"
+    var errorMsg: String = String.format(InitValidator.errorMessage.getMaxLength(), maxLength)
 ): BaseRule {
 
     override fun validate(text: String): Boolean {

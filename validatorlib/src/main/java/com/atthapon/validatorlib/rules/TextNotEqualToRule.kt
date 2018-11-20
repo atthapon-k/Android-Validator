@@ -4,7 +4,7 @@ import com.atthapon.validatorlib.common.InitValidator
 
 class TextNotEqualToRule(
     val target: String,
-    var errorMsg: String = "${InitValidator.errorMessage.getTextNotEqualTo()} $target"
+    var errorMsg: String = String.format(InitValidator.errorMessage.getTextNotEqualTo(), target)
 ): BaseRule {
 
     override fun validate(text: String): Boolean {
