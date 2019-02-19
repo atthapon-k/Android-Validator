@@ -31,11 +31,6 @@ class Validator(val text: String) {
     var rulesList = ArrayList<BaseRule>()
 
     /*
-     * The list of error of each rule when all checked
-     */
-    var errorList = ArrayList<String>()
-
-    /*
      * Performs the validation check and returns true or false.
      * Also invokes success and error callbacks if non null.
      */
@@ -53,17 +48,6 @@ class Validator(val text: String) {
         else
             errorCallback?.invoke(errorMessage)
         return isValid
-    }
-
-    fun checkAll(): ArrayList<String> {
-        rulesList.forEach { rule ->
-            if (!rule.validate(text)) {
-                errorList.add(rule.getErrorMessage())
-            }
-        }
-
-        if (!errorList.isEmpty()) isValid = false
-        return errorList
     }
 
     fun setError(message: String) {
