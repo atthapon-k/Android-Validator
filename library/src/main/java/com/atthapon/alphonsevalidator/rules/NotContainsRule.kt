@@ -4,8 +4,8 @@ import com.atthapon.alphonsevalidator.common.AlphonseValidator
 
 class NotContainsRule(
     val target: String,
-    var errorMsg: String = String.format(AlphonseValidator.errorMessage.getNotContain(), target)
-): BaseRule {
+    var errorMsg: String = String.format(AlphonseValidator.getErrorMessage().getNotContain(), target)
+) : BaseRule {
 
     override fun validate(text: String): Boolean {
 

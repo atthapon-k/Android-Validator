@@ -2,7 +2,9 @@ package com.atthapon.alphonsevalidator.rules
 
 import com.atthapon.alphonsevalidator.common.AlphonseValidator
 
-class RegexRule(val pattern: String, var errorMsg: String = AlphonseValidator.errorMessage.getRegex()): BaseRule {
+class RegexRule(
+    private val pattern: String, var errorMsg: String = AlphonseValidator.getErrorMessage().getRegex()
+) : BaseRule {
 
     override fun validate(text: String): Boolean {
         return text.matches(Regex(pattern))

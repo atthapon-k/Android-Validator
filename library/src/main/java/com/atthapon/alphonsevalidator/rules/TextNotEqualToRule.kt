@@ -4,8 +4,8 @@ import com.atthapon.alphonsevalidator.common.AlphonseValidator
 
 class TextNotEqualToRule(
     val target: String,
-    var errorMsg: String = String.format(AlphonseValidator.errorMessage.getTextNotEqualTo(), target)
-): BaseRule {
+    var errorMsg: String = String.format(AlphonseValidator.getErrorMessage().getTextNotEqualTo(), target)
+) : BaseRule {
 
     override fun validate(text: String): Boolean {
 

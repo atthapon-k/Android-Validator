@@ -4,7 +4,7 @@ import com.atthapon.alphonsevalidator.common.AlphonseValidator
 
 class ContainsRule(
     val target: String,
-    var errorMsg: String = String.format(AlphonseValidator.errorMessage.getContain(), target)
+    var errorMsg: String = String.format(AlphonseValidator.getErrorMessage().getContain(), target)
 ) : BaseRule {
 
     override fun validate(text: String): Boolean {
