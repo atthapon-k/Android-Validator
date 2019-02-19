@@ -1,1 +1,1 @@
-include ':app', ':validatorlib'
+include ':app', ':library'
