@@ -2,8 +2,9 @@ package com.atthapon.alphonsevalidator.rules
 
 import com.atthapon.alphonsevalidator.common.AlphonseValidator
 
-class CreditCardWithDashesRule(var errorMsg: String = AlphonseValidator.errorMessage.getCreditCardWithDashes()):
-    BaseRule {
+class CreditCardWithDashesRule(
+    var errorMsg: String = AlphonseValidator.getErrorMessage().getCreditCardWithDashes()
+) : BaseRule {
 
     override fun validate(text: String): Boolean {
         val listOfPattern = ArrayList<String>()

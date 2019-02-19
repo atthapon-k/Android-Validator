@@ -6,8 +6,8 @@ import java.text.NumberFormat
 
 class LessThanOrEqualRule(
     val target: Number,
-    var errorMsg: String = String.format(AlphonseValidator.errorMessage.getLessThanOrEqual(), target)
-): BaseRule {
+    var errorMsg: String = String.format(AlphonseValidator.getErrorMessage().getLessThanOrEqual(), target)
+) : BaseRule {
 
     override fun validate(text: String): Boolean {
 

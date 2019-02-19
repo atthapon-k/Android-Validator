@@ -3,7 +3,9 @@ package com.atthapon.alphonsevalidator.rules
 import com.atthapon.alphonsevalidator.Validator
 import com.atthapon.alphonsevalidator.common.AlphonseValidator
 
-class NoNumbersRule(var errorMsg: String = AlphonseValidator.errorMessage.getNoNumber()): BaseRule {
+class NoNumbersRule(
+    var errorMsg: String = AlphonseValidator.getErrorMessage().getNoNumber()
+) : BaseRule {
 
     override fun validate(text: String): Boolean = !Validator(text).regex(".*\\d.*").check()
 

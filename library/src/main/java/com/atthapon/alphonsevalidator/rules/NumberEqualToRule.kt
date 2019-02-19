@@ -6,8 +6,8 @@ import java.text.NumberFormat
 
 class NumberEqualToRule(
     val target: Number,
-    var errorMsg: String = String.format(AlphonseValidator.errorMessage.getNumberEqualTo(), target)
-): BaseRule {
+    var errorMsg: String = String.format(AlphonseValidator.getErrorMessage().getNumberEqualTo(), target)
+) : BaseRule {
 
     override fun validate(text: String): Boolean {
 

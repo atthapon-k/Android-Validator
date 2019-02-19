@@ -6,7 +6,7 @@ import java.text.NumberFormat
 
 class LessThanRule(
     var target: Number = 0,
-    var errorMsg: String = String.format(AlphonseValidator.errorMessage.getLessThan(), target)
+    var errorMsg: String = String.format(AlphonseValidator.getErrorMessage().getLessThan(), target)
 ): BaseRule {
 
     override fun validate(text: String): Boolean {
