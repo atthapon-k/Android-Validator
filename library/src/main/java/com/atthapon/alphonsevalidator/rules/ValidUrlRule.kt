@@ -1,9 +1,9 @@
 package com.atthapon.alphonsevalidator.rules
 
 import android.util.Patterns
-import com.atthapon.alphonsevalidator.common.AlphoneseValidator
+import com.atthapon.alphonsevalidator.common.AlphonseValidator
 
-class ValidUrlRule(var errorMsg: String = AlphoneseValidator.errorMessage.getValidUrl()): BaseRule {
+class ValidUrlRule(var errorMsg: String = AlphonseValidator.errorMessage.getValidUrl()): BaseRule {
     override fun validate(text: String): Boolean {
         if (text.isEmpty())
             return false

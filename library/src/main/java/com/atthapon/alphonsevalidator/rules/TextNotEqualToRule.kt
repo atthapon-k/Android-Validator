@@ -1,10 +1,10 @@
 package com.atthapon.alphonsevalidator.rules
 
-import com.atthapon.alphonsevalidator.common.AlphoneseValidator
+import com.atthapon.alphonsevalidator.common.AlphonseValidator
 
 class TextNotEqualToRule(
     val target: String,
-    var errorMsg: String = String.format(AlphoneseValidator.errorMessage.getTextNotEqualTo(), target)
+    var errorMsg: String = String.format(AlphonseValidator.errorMessage.getTextNotEqualTo(), target)
 ): BaseRule {
 
     override fun validate(text: String): Boolean {

@@ -1,10 +1,10 @@
 package com.atthapon.alphonsevalidator.rules
 
-import com.atthapon.alphonsevalidator.common.AlphoneseValidator
+import com.atthapon.alphonsevalidator.common.AlphonseValidator
 
 class EndsWithRule(
     val target: String,
-    var errorMsg: String = String.format(AlphoneseValidator.errorMessage.getEndsWith(), target)
+    var errorMsg: String = String.format(AlphonseValidator.errorMessage.getEndsWith(), target)
 ): BaseRule {
 
     override fun validate(text: String): Boolean {

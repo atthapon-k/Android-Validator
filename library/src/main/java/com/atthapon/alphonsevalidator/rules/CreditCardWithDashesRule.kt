@@ -1,8 +1,8 @@
 package com.atthapon.alphonsevalidator.rules
 
-import com.atthapon.alphonsevalidator.common.AlphoneseValidator
+import com.atthapon.alphonsevalidator.common.AlphonseValidator
 
-class CreditCardWithDashesRule(var errorMsg: String = AlphoneseValidator.errorMessage.getCreditCardWithDashes()):
+class CreditCardWithDashesRule(var errorMsg: String = AlphonseValidator.errorMessage.getCreditCardWithDashes()):
     BaseRule {
 
     override fun validate(text: String): Boolean {
