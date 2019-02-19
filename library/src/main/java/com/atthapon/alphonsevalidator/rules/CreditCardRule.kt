@@ -1,8 +1,8 @@
 package com.atthapon.alphonsevalidator.rules
 
-import com.atthapon.alphonsevalidator.common.AlphoneseValidator
+import com.atthapon.alphonsevalidator.common.AlphonseValidator
 
-class CreditCardRule(var errorMsg: String = AlphoneseValidator.errorMessage.getCreditCard()): BaseRule {
+class CreditCardRule(var errorMsg: String = AlphonseValidator.errorMessage.getCreditCard()): BaseRule {
 
     override fun validate(text: String): Boolean {
         val listOfPattern = ArrayList<String>()

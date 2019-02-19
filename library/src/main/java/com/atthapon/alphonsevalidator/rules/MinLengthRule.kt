@@ -1,10 +1,10 @@
 package com.atthapon.alphonsevalidator.rules
 
-import com.atthapon.alphonsevalidator.common.AlphoneseValidator
+import com.atthapon.alphonsevalidator.common.AlphonseValidator
 
 class MinLengthRule(
     val minLength: Int,
-    var errorMsg: String = String.format(AlphoneseValidator.errorMessage.getMinLength(), minLength)
+    var errorMsg: String = String.format(AlphonseValidator.errorMessage.getMinLength(), minLength)
 ): BaseRule {
 
     override fun validate(text: String): Boolean {

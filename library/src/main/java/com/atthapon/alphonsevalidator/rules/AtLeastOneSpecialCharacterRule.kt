@@ -1,9 +1,9 @@
 package com.atthapon.alphonsevalidator.rules
 
 import com.atthapon.alphonsevalidator.Validator
-import com.atthapon.alphonsevalidator.common.AlphoneseValidator
+import com.atthapon.alphonsevalidator.common.AlphonseValidator
 
-class AtLeastOneSpecialCharacterRule(var errorMsg: String = AlphoneseValidator.errorMessage.getAtLeastOneSpecialCharacter()):
+class AtLeastOneSpecialCharacterRule(var errorMsg: String = AlphonseValidator.errorMessage.getAtLeastOneSpecialCharacter()):
     BaseRule {
     override fun validate(text: String): Boolean {
         if (text.isEmpty())

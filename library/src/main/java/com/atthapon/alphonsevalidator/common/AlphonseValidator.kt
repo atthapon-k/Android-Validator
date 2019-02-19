@@ -3,7 +3,7 @@ package com.atthapon.alphonsevalidator.common
 import com.atthapon.alphonsevalidator.error.DefaultErrorMessage
 import com.atthapon.alphonsevalidator.error.ErrorMessage
 
-object AlphoneseValidator {
+object AlphonseValidator {
     var errorMessage: ErrorMessage = DefaultErrorMessage()
 
     private fun init(errorMessage: ErrorMessage) {

@@ -1,9 +1,9 @@
 package com.atthapon.alphonsevalidator.rules
 
 import com.atthapon.alphonsevalidator.Validator
-import com.atthapon.alphonsevalidator.common.AlphoneseValidator
+import com.atthapon.alphonsevalidator.common.AlphonseValidator
 
-class OnlyNumbersRule(var errorMsg: String = AlphoneseValidator.errorMessage.getOnlyNumbers()): BaseRule {
+class OnlyNumbersRule(var errorMsg: String = AlphonseValidator.errorMessage.getOnlyNumbers()): BaseRule {
 
     override fun validate(text: String): Boolean = Validator(text).regex("\\d+").check()
 

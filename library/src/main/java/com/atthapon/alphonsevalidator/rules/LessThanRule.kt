@@ -1,12 +1,12 @@
 package com.atthapon.alphonsevalidator.rules
 
-import com.atthapon.alphonsevalidator.common.AlphoneseValidator
+import com.atthapon.alphonsevalidator.common.AlphonseValidator
 import com.atthapon.alphonsevalidator.extention.validNumber
 import java.text.NumberFormat
 
 class LessThanRule(
     var target: Number = 0,
-    var errorMsg: String = String.format(AlphoneseValidator.errorMessage.getLessThan(), target)
+    var errorMsg: String = String.format(AlphonseValidator.errorMessage.getLessThan(), target)
 ): BaseRule {
 
     override fun validate(text: String): Boolean {

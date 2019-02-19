@@ -1,8 +1,8 @@
 package com.atthapon.alphonsevalidator.rules
 
-import com.atthapon.alphonsevalidator.common.AlphoneseValidator
+import com.atthapon.alphonsevalidator.common.AlphonseValidator
 
-class CreditCardWithSpacesRule(var errorMsg: String = AlphoneseValidator.errorMessage.getCreditCardWithSpaces()):
+class CreditCardWithSpacesRule(var errorMsg: String = AlphonseValidator.errorMessage.getCreditCardWithSpaces()):
     BaseRule {
 
     override fun validate(text: String): Boolean {

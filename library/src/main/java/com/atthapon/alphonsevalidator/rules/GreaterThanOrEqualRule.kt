@@ -1,12 +1,12 @@
 package com.atthapon.alphonsevalidator.rules
 
-import com.atthapon.alphonsevalidator.common.AlphoneseValidator
+import com.atthapon.alphonsevalidator.common.AlphonseValidator
 import com.atthapon.alphonsevalidator.extention.validNumber
 import java.text.NumberFormat
 
 class GreaterThanOrEqualRule(
     val target: Number,
-    var errorMsg: String = String.format(AlphoneseValidator.errorMessage.getGreaterThanOrEqual(), target)
+    var errorMsg: String = String.format(AlphonseValidator.errorMessage.getGreaterThanOrEqual(), target)
 ):
     BaseRule {
 
