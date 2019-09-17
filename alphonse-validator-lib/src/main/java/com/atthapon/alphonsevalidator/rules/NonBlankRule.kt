@@ -8,7 +8,7 @@ import com.atthapon.alphonsevalidator.common.AlphonseValidator
 class NonBlankRule(
     var errorMsg: String = AlphonseValidator.getErrorMessage().getNonBlank()
 ) : BaseRule {
-    override fun validate(text: String): Boolean = !text.isNotBlank()
+    override fun validate(text: String): Boolean = text.isNotBlank()
 
     override fun getErrorMessage(): String = errorMsg
 
