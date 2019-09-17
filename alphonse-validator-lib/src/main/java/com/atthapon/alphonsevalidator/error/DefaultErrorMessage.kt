@@ -9,7 +9,8 @@ open class DefaultErrorMessage : ErrorMessage {
 
     override fun getAtLeastOneNumberCase(): String = "At least one letter should be a number."
 
-    override fun getAtLeastOneSpecialCharacter(): String = "Should contain at least 1 special characters."
+    override fun getAtLeastOneSpecialCharacter(): String =
+        "Should contain at least 1 special characters."
 
     override fun getAtLeastOneUpperCase(): String = "At least one letter should be in upper case."
 
@@ -38,6 +39,8 @@ open class DefaultErrorMessage : ErrorMessage {
     override fun getMinLength(): String = "Length should be greater than %s."
 
     override fun getNonEmpty(): String = "Can't be empty!"
+
+    override fun getNonBlank(): String = "Can't be blank!"
 
     override fun getNoNumber(): String = "Should not contain any numbers!"
 
