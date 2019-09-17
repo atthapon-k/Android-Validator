@@ -19,6 +19,7 @@ interface ErrorMessage {
     fun getLessThan(): String
     fun getMaxLength(): String
     fun getMinLength(): String
+    fun getNonBlank(): String
     fun getNonEmpty(): String
     fun getNoNumber(): String
     fun getNoSpecialCharacter(): String

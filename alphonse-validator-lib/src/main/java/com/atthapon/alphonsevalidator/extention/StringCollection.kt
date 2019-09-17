@@ -7,8 +7,7 @@ fun Any.nonEmptyList(vararg strsList: String, callback: (view: String, message: 
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -26,8 +25,7 @@ fun Any.minLengthList(
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -46,8 +44,7 @@ fun Any.maxLengthList(
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -57,12 +54,11 @@ fun Any.maxLengthList(
 fun Any.validEmailList(vararg strsList: String, callback: (view: String, message: String) -> Unit): Boolean {
     var result = false
     for (str in strsList) {
-        result = str.validEmail() {
+        result = str.validEmail {
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -72,12 +68,11 @@ fun Any.validEmailList(vararg strsList: String, callback: (view: String, message
 fun Any.validNumberList(vararg strsList: String, callback: (view: String, message: String) -> Unit): Boolean {
     var result = false
     for (str in strsList) {
-        result = str.validNumber() {
+        result = str.validNumber {
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -96,8 +91,7 @@ fun Any.greaterThanList(
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -116,8 +110,7 @@ fun Any.greaterThanOrEqualList(
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -136,8 +129,7 @@ fun Any.lessThanList(
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -156,8 +148,7 @@ fun Any.lessThanOrEqualnList(
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -176,8 +167,7 @@ fun Any.numberEqualToList(
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -188,12 +178,11 @@ fun Any.numberEqualToList(
 fun Any.allUperCaseList(vararg strsList: String, callback: (view: String, message: String) -> Unit): Boolean {
     var result = false
     for (str in strsList) {
-        result = str.allUperCase() {
+        result = str.allUpperCase {
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -204,12 +193,11 @@ fun Any.allUperCaseList(vararg strsList: String, callback: (view: String, messag
 fun Any.allLowerCaseList(vararg strsList: String, callback: (view: String, message: String) -> Unit): Boolean {
     var result = false
     for (str in strsList) {
-        result = str.allLowerCase() {
+        result = str.allLowerCase {
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -217,15 +205,14 @@ fun Any.allLowerCaseList(vararg strsList: String, callback: (view: String, messa
 
 // At least one upper Case
 
-fun Any.atleastOneUpperCaseList(vararg strsList: String, callback: (view: String, message: String) -> Unit): Boolean {
+fun Any.atLeastOneUpperCaseList(vararg strsList: String, callback: (view: String, message: String) -> Unit): Boolean {
     var result = false
     for (str in strsList) {
-        result = str.atleastOneUpperCase() {
+        result = str.atLeastOneUpperCase {
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -233,30 +220,28 @@ fun Any.atleastOneUpperCaseList(vararg strsList: String, callback: (view: String
 
 // At least one lower Case
 
-fun Any.atleastOneLowerCaseList(vararg strsList: String, callback: (view: String, message: String) -> Unit): Boolean {
+fun Any.atLeastOneLowerCaseList(vararg strsList: String, callback: (view: String, message: String) -> Unit): Boolean {
     var result = false
     for (str in strsList) {
-        result = str.atleastOneLowerCase() {
+        result = str.atLeastOneLowerCase {
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
 
 // At least one number
 
-fun Any.atleastOneNumberList(vararg strsList: String, callback: (view: String, message: String) -> Unit): Boolean {
+fun Any.atLeastOneNumberList(vararg strsList: String, callback: (view: String, message: String) -> Unit): Boolean {
     var result = false
     for (str in strsList) {
-        result = str.atleastOneNumber() {
+        result = str.atLeastOneNumber {
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -267,12 +252,11 @@ fun Any.atleastOneNumberList(vararg strsList: String, callback: (view: String, m
 fun Any.startWithNumberList(vararg strsList: String, callback: (view: String, message: String) -> Unit): Boolean {
     var result = false
     for (str in strsList) {
-        result = str.startWithNumber() {
+        result = str.startWithNumber {
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -283,12 +267,11 @@ fun Any.startWithNumberList(vararg strsList: String, callback: (view: String, me
 fun Any.startWithNonNumberList(vararg strsList: String, callback: (view: String, message: String) -> Unit): Boolean {
     var result = false
     for (str in strsList) {
-        result = str.startWithNonNumber() {
+        result = str.startWithNonNumber {
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -298,12 +281,11 @@ fun Any.startWithNonNumberList(vararg strsList: String, callback: (view: String,
 fun Any.noNumbersList(vararg strsList: String, callback: (view: String, message: String) -> Unit): Boolean {
     var result = false
     for (str in strsList) {
-        result = str.noNumbers() {
+        result = str.noNumbers {
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -314,12 +296,11 @@ fun Any.noNumbersList(vararg strsList: String, callback: (view: String, message:
 fun Any.onlyNumbersList(vararg strsList: String, callback: (view: String, message: String) -> Unit): Boolean {
     var result = false
     for (str in strsList) {
-        result = str.onlyNumbers() {
+        result = str.onlyNumbers {
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -330,12 +311,11 @@ fun Any.onlyNumbersList(vararg strsList: String, callback: (view: String, messag
 fun Any.noSpecialCharactersList(vararg strsList: String, callback: (view: String, message: String) -> Unit): Boolean {
     var result = false
     for (str in strsList) {
-        result = str.noSpecialCharacters() {
+        result = str.noSpecialCharacters {
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -343,18 +323,17 @@ fun Any.noSpecialCharactersList(vararg strsList: String, callback: (view: String
 
 // at least one special characters
 
-fun Any.atleastOneSpecialCharactersList(
+fun Any.atLeastOneSpecialCharactersList(
     vararg strsList: String,
     callback: (view: String, message: String) -> Unit
 ): Boolean {
     var result = false
     for (str in strsList) {
-        result = str.atleastOneSpecialCharacters() {
+        result = str.atLeastOneSpecialCharacters {
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -373,8 +352,7 @@ fun Any.textEqualToList(
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -392,8 +370,7 @@ fun Any.textNotEqualToList(
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -412,8 +389,7 @@ fun Any.startsWithList(
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -421,19 +397,18 @@ fun Any.startsWithList(
 
 // ends with
 
-fun Any.endssWithList(
+fun Any.endWithList(
     target: String,
     vararg strsList: String,
     callback: (view: String, message: String) -> Unit
 ): Boolean {
     var result = false
     for (str in strsList) {
-        result = str.endssWith(target) {
+        result = str.endWith(target) {
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -452,8 +427,7 @@ fun Any.containsList(
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -472,8 +446,7 @@ fun Any.notContainsList(
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -484,12 +457,11 @@ fun Any.notContainsList(
 fun Any.creditCardNumberList(vararg strsList: String, callback: (view: String, message: String) -> Unit): Boolean {
     var result = false
     for (str in strsList) {
-        result = str.creditCardNumber() {
+        result = str.creditCardNumber {
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -502,12 +474,11 @@ fun Any.creditCardNumberWithSpacesList(
 ): Boolean {
     var result = false
     for (str in strsList) {
-        result = str.creditCardNumberWithSpaces() {
+        result = str.creditCardNumberWithSpaces {
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -521,12 +492,11 @@ fun Any.creditCardNumberWithDashesList(
 ): Boolean {
     var result = false
     for (str in strsList) {
-        result = str.creditCardNumberWithDashes() {
+        result = str.creditCardNumberWithDashes {
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }
@@ -536,11 +506,11 @@ fun Any.creditCardNumberWithDashesList(
 fun Any.validUrlList(vararg strsList: String, callback: (view: String, message: String) -> Unit): Boolean {
     var result = false
     for (str in strsList) {
-        result = str.validUrl() {
+        result = str.validUrl {
             callback.invoke(str, it)
         }
 
-        if (result == false)
+        if (!result)
             return false
     }
     return result
@@ -560,8 +530,7 @@ fun Any.regexList(
             callback.invoke(str, it)
         }
 
-        if (result == false)
-            return false
+        if (!result) return false
     }
     return result
 }

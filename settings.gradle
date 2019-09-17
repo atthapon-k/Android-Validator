@@ -1,1 +1,1 @@
-include ':app', ':alphonse-validator-lib'
+include ':alphonse-validator-lib'
