@@ -7,7 +7,7 @@ import java.text.NumberFormat
 class LessThanRule(
     var target: Number = 0,
     var errorMsg: String = String.format(AlphonseValidator.getErrorMessage().getLessThan(), target)
-): BaseRule {
+) : BaseRule {
 
     override fun validate(text: String): Boolean {
 
@@ -16,7 +16,7 @@ class LessThanRule(
 
         // Negative
         if (text.startsWith("-")) {
-            var txtNum = text.substringAfter("-")
+            val txtNum = text.substringAfter("-")
             if (txtNum.validNumber()) {
                 var number = NumberFormat.getNumberInstance().parse(txtNum)
                 number = number.toFloat() * -1
@@ -27,7 +27,7 @@ class LessThanRule(
         // Positive
         else {
             if (text.validNumber()) {
-                var number = NumberFormat.getNumberInstance().parse(text)
+                val number = NumberFormat.getNumberInstance().parse(text)
                 return (number.toFloat() < target.toFloat())
             }
             return false

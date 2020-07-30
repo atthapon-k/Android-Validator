@@ -6,7 +6,8 @@ import java.text.NumberFormat
 
 class GreaterThanOrEqualRule(
     val target: Number,
-    var errorMsg: String = String.format(AlphonseValidator.getErrorMessage().getGreaterThanOrEqual(), target)
+    var errorMsg: String = String.format(AlphonseValidator.getErrorMessage()
+        .getGreaterThanOrEqual(), target)
 ) : BaseRule {
 
     override fun validate(text: String): Boolean {
@@ -16,7 +17,7 @@ class GreaterThanOrEqualRule(
 
         // Negative
         if (text.startsWith("-")) {
-            var txtNum = text.substringAfter("-")
+            val txtNum = text.substringAfter("-")
             if (txtNum.validNumber()) {
                 var number = NumberFormat.getNumberInstance().parse(txtNum)
                 number = number.toFloat() * -1
@@ -27,7 +28,7 @@ class GreaterThanOrEqualRule(
         // Positive
         else {
             if (text.validNumber()) {
-                var number = NumberFormat.getNumberInstance().parse(text)
+                val number = NumberFormat.getNumberInstance().parse(text)
                 return (number.toFloat() >= target.toFloat())
             }
             return false
