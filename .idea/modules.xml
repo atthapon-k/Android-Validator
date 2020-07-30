@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AndroidValidator.iml" filepath="$PROJECT_DIR$/AndroidValidator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/validatorlib/validatorlib.iml" filepath="$PROJECT_DIR$/validatorlib/validatorlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alphonse-validator.iml" filepath="$PROJECT_DIR$/alphonse-validator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alphonse-validator-lib/alphonse-validator-lib.iml" filepath="$PROJECT_DIR$/alphonse-validator-lib/alphonse-validator-lib.iml" />
     </modules>
   </component>
 </project>
