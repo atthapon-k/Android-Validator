@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/alphonse-validator.iml" filepath="$PROJECT_DIR$/alphonse-validator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/alphonse-validator-lib/alphonse-validator-alphonse-validator-lib.iml" filepath="$PROJECT_DIR$/.idea/modules/alphonse-validator-lib/alphonse-validator-alphonse-validator-lib.iml" group="alphonse-validator/alphonse-validator-lib" />
       <module fileurl="file://$PROJECT_DIR$/alphonse-validator-lib/alphonse-validator-lib.iml" filepath="$PROJECT_DIR$/alphonse-validator-lib/alphonse-validator-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/atthapon-alphonse-validator.iml" filepath="$PROJECT_DIR$/.idea/modules/atthapon-alphonse-validator.iml" group="alphonse-validator" />
     </modules>
   </component>
 </project>

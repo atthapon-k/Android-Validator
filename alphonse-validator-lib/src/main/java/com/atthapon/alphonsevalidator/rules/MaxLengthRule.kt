@@ -4,7 +4,8 @@ import com.atthapon.alphonsevalidator.common.AlphonseValidator
 
 class MaxLengthRule(
     private val maxLength: Int,
-    var errorMsg: String = String.format(AlphonseValidator.getErrorMessage().getMaxLength(), maxLength)
+    var errorMsg: String = String.format(AlphonseValidator.getErrorMessage()
+        .getMaxLength(), maxLength)
 ) : BaseRule {
 
     override fun validate(text: String): Boolean {

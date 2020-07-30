@@ -5,7 +5,7 @@ import com.atthapon.alphonsevalidator.common.AlphonseValidator
 
 class StartsWithNoNumberRule(
     var errorMsg: String = AlphonseValidator.getErrorMessage().getStartsWithNoNumber()
-): BaseRule {
+) : BaseRule {
     override fun validate(text: String): Boolean {
         if (text.isEmpty())
             return false

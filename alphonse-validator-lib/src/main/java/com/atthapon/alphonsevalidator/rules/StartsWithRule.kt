@@ -4,7 +4,8 @@ import com.atthapon.alphonsevalidator.common.AlphonseValidator
 
 class StartsWithRule(
     val target: String,
-    var errorMsg: String = String.format(AlphonseValidator.getErrorMessage().getStartsWith(), target)
+    var errorMsg: String = String.format(AlphonseValidator.getErrorMessage()
+        .getStartsWith(), target)
 ) : BaseRule {
 
     override fun validate(text: String): Boolean {
