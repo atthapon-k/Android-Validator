@@ -1,13 +1,9 @@
 package com.atthapon.alphonsevalidator.rules
 
-import com.atthapon.alphonsevalidator.common.AlphonseValidator
-
-class NonEmptyRule(
-    var errorMsg: String = AlphonseValidator.getErrorMessage().getNonEmpty()
-) : BaseRule {
+class NonEmptyRule(var errorMsg: String? = null): BaseRule {
     override fun validate(text: String): Boolean = text.isNotEmpty()
 
-    override fun getErrorMessage(): String = errorMsg
+    override fun getErrorMessage() = errorMsg
 
     override fun setError(msg: String) {
         errorMsg = msg

@@ -35,15 +35,15 @@ class Validator(val text: String) {
      * Also invokes success and error callbacks if non null.
      */
     fun check(): Boolean {
-        for (rule in rulesList) {
-            if (!rule.validate(text)) {
-                setError(rule.getErrorMessage())
+        for(rule in rulesList) {
+            if(!rule.validate(text)) {
+                rule.getErrorMessage()?.also { setError(it) }
                 break
             }
         }
 
         // Invoking callbacks
-        if (isValid) successCallback?.invoke() else errorCallback?.invoke(errorMessage)
+        if(isValid) successCallback?.invoke() else errorCallback?.invoke(errorMessage)
         return isValid
     }
 
@@ -70,6 +70,12 @@ class Validator(val text: String) {
     // Rules
     fun nonEmpty(errorMsg: String? = null): Validator {
         val rule = errorMsg?.let { NonEmptyRule(it) } ?: NonEmptyRule()
+        addRule(rule)
+        return this
+    }
+
+    fun nonEmptyList(target: List<Any>, errorMsg: String? = null): Validator {
+        val rule = errorMsg?.let { NonEmptyListRule(target, it) } ?: NonEmptyListRule(target)
         addRule(rule)
         return this
     }
@@ -234,6 +240,12 @@ class Validator(val text: String) {
 
     fun notContains(target: String, errorMsg: String? = null): Validator {
         val rule = errorMsg?.let { NotContainsRule(target, it) } ?: NotContainsRule(target)
+        addRule(rule)
+        return this
+    }
+
+    fun notContainsInList(target: List<Any>, errorMsg: String? = null): Validator {
+        val rule = errorMsg?.let { NotContainsInList(target, it) } ?: NotContainsInList(target)
         addRule(rule)
         return this
     }
