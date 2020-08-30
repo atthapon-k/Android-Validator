@@ -2,7 +2,7 @@ package com.atthapon.alphonsevalidator
 
 import com.atthapon.alphonsevalidator.rules.*
 
-class Validator(val text: String) {
+class Validator(val text: String = "") {
     /*
      * Boolean to determine whether all the validations have passed successfully!
      * If any validation check is failed, then the value to
