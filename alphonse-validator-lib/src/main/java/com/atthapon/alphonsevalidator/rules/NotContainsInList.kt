@@ -1,11 +1,8 @@
 package com.atthapon.alphonsevalidator.rules
 
-import com.atthapon.alphonsevalidator.Validator
-
-class NoSpecialCharacterRule(var errorMsg: String? = null): BaseRule {
+class NotContainsInList(val target: List<Any>, var errorMsg: String? = null): BaseRule {
     override fun validate(text: String): Boolean {
-        if(text.isEmpty()) return false
-        return Validator(text).regex("[A-Za-z0-9]+").check()
+        return !target.contains(text)
     }
 
     override fun getErrorMessage() = errorMsg
