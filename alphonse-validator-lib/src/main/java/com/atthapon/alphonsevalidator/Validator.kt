@@ -165,8 +165,7 @@ class Validator(val text: String = "") {
     }
 
     fun atLeastOneNumber(errorMsg: String? = null): Validator {
-        val rule =
-            errorMsg?.let { AtLeastOneNumberCaseRule(it) } ?: AtLeastOneNumberCaseRule()
+        val rule = errorMsg?.let { AtLeastOneNumberCaseRule(it) } ?: AtLeastOneNumberCaseRule()
         addRule(rule)
         return this
     }
