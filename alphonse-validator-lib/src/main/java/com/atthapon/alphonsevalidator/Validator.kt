@@ -37,7 +37,7 @@ class Validator(val text: String = "") {
     fun check(): Boolean {
         for(rule in rulesList) {
             if(!rule.validate(text)) {
-                rule.getErrorMessage()?.also { setError(it) }
+                setError(rule.getErrorMessage().orEmpty())
                 break
             }
         }
